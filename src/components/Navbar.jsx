@@ -64,7 +64,7 @@ export default function Navbar() {
       {localStorage.getItem('username')!==''?
       <div className='profile-div text-light'>
         <div className="profilepic">
-          {/* {localStorage.getItem('username')!==null? localStorage.getItem('username').slice(0,1).toUpperCase():""} */}
+          {localStorage.getItem('username')!==null? localStorage.getItem('username').slice(0,1).toUpperCase():""}
         </div>
         <select onChange={logout} className="form-select" aria-label="Default select example">
           <option defaultChecked >{localStorage.getItem('username')}</option>
@@ -88,7 +88,7 @@ export default function Navbar() {
 
     <div className="sidebar-head text-light">
       <div className="profilepic text-dark shadow">
-            {localStorage.getItem('username').slice(0,1).toUpperCase()}
+      {localStorage.getItem('username')!==null? localStorage.getItem('username').slice(0,1).toUpperCase():""}
       </div>
       <h3>{localStorage.getItem('username')}</h3>
     </div>
